@@ -1,0 +1,36 @@
+html>body {
+	font-family: cursive;
+	background-color: #f5f8fa;
+}
+.container {
+	height: 100%;
+}
+.content, .page-container {
+	position: relative;
+}
+.profile-canopy-wrap {
+	overflow: hidden;
+}
+.container>.profile-nav::before, .container>.profile-nav::after {
+	content: none;
+}
+.profile-nav>li>a {
+	height: 60px;
+}
+.user-name {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: #000;
+}
+.user-email {
+	font-size: 14px;
+	line-height: 19px;
+	color: #66757f;
+}
+.user-email:hover, .user-email:focus {
+	text-decoration: none;
+}
+.user-email:hover .email-target {
+	text-decoration: underline;
+}
