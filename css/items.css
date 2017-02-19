@@ -1,7 +1,7 @@
 .profile-pic {
 	display: block;
 	width: 36px;
-	height: 36px !important;
+	height: 36px;
 	padding: 0;
 	border-radius: 50%;
 	background-image: url(../imgs/avatar.jpg);
@@ -9,4 +9,5 @@
 }
 .nav-top li {
 	height: 100%;
+	overflow: hidden;
 }

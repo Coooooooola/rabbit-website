@@ -18,6 +18,7 @@
 	display: inline-block;
 }
 .profile-nav {
+	font-size: 0;
 	text-align-last: justify;
 	height: 100%;
 	overflow: hidden;
@@ -60,11 +61,8 @@
 .mini-profile {
 	margin-right: 10px;
 }
-.profile-mini a {
+.profile-info-text>a {
 	display: block;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
 .profile-info {
 	display: flex;
@@ -81,7 +79,7 @@
 	background-color: rgba(255, 255, 255, 0.8);
 	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
 }
-.profile-nav>li>.profile-nav-active {
+.profile-nav>li>.active {
 	height: 56px;
 	color: #273164;
 }

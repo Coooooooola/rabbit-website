@@ -1,0 +1,46 @@
+.color-all { background-image: linear-gradient(46deg, #693ef5 36%, #ff7474 36%, #ff7474 64%, #6ace6a 64%); }
+.color-primary { background-color: #693ef5; }
+.color-secondly { background-color: #ff7474; }
+.color-daily { background-color: #6ace6a; }
+
+.sample {
+	margin: auto 5px auto 0;
+	width: 50px;
+	height: 20px;
+	border-radius: 4px;
+}
+.sample-list>li:last-child>.sample-btn {
+	margin-bottom: 0;
+}
+.sample-text {
+	display: block;
+	flex: 1;
+}
+.sample-btn {
+	display: flex;
+	margin-bottom: 10px;
+	text-align: left;
+	width: 100%;
+	background-color: transparent;
+	border-radius: 4px;
+	border: none;
+	padding: 6px 10px;
+	line-height: 24px;
+	transition: .1s;
+	outline: none;
+}
+.sample-btn:hover, .sample-btn.active {
+	background-color: rgba(0,0,0,.22);
+}
+.log-count {
+	margin: auto 0;
+}
+.sam-btn-all { background-image: linear-gradient(60deg, rgba(105, 62, 245, 0.1) 15%, rgba(255, 116, 116, 0.1), rgba(106, 206, 106, 0.1) 85%); }
+.sam-btn-primary { background-color: rgba(105, 62, 245, 0.1); }
+.sam-btn-secondly { background-color: rgba(255, 116, 116, 0.1); }
+.sam-btn-daily { background-color: rgba(106, 206, 106, 0.1); }
+
+.sam-btn-all:hover, .sample-list>li>.active.sam-btn-all { background-image: linear-gradient(60deg, rgba(105, 62, 245, 0.5) 15%, rgba(255, 116, 116, 0.5), rgba(106, 206, 106, 0.5) 85%); }
+.sam-btn-primary:hover, .sample-list>li>.active.sam-btn-primary { background-color: rgba(105, 62, 245, 0.4); }
+.sam-btn-secondly:hover, .sample-list>li>.active.sam-btn-secondly { background-color: rgba(255, 116, 116, 0.4); }
+.sam-btn-daily:hover, .sample-list>li>.active.sam-btn-daily { background-color: rgba(106, 206, 106, 0.4); }

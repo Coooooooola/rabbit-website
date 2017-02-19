@@ -1,13 +1,36 @@
-html>body {
-	/*font-family: cursive;*/
-	
+.list-init {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	user-select: none;
+}
+.list-init::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.overflow-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+h4, p {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+#content {
+	position: relative;
+	min-height: 100%;
 	background-color: #f5f8fa;
+}
+#page-container {
+	position: relative;
+	min-width: 586px;
 }
 .container {
 	height: 100%;
-}
-.content, .page-container {
-	position: relative;
 }
 .profile-canopy-wrap {
 	overflow: hidden;

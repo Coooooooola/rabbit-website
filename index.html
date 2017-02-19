@@ -3,8 +3,11 @@
 <head>
 	<title>rabbit</title>
 	<meta content="charset=utf-8">
-	<link rel="stylesheet" href="css/main.css">
+	<!--
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	-->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="css/page-container-canopy.css">
 	<link rel="stylesheet" href="css/footer.css">
@@ -12,30 +15,33 @@
 	<link rel="stylesheet" href="css/content-container.css">
 	<link rel="stylesheet" href="css/items.css">
 	<link rel="stylesheet" href="css/profile.css">
+	<link rel="stylesheet" href="css/card.css">
+	<link rel="stylesheet" href="css/guider.css">
+
 </head>
 <body>
 
-<div class="content">
+<div id="content" class="clearfix">
 	<nav class="nav-top">
 		<div class="bg-mask"></div>
 		<div class="container">
 			<div class="pull-left">
-				<ul class="nav-init nav-top-menu">
-					<li><a href="#" class="top-menu-active"><span class="glyphicon glyphicon-home"></span> <span class="nav-text">Home</span></a></li>
+				<ul class="list-init nav-top-menu js-nav-menu">
+					<li><a href="#"><span class="glyphicon glyphicon-home"></span> <span class="nav-text">Home</span></a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-book"></span> <span class="nav-text">github</span></a></li>
 					<li><a href="#"><span class="nav-text">Lab</span></a></li>
 				</ul>
 			</div>
 			<div class="pull-right">
-				<ul class="nav-init nav-top-menu clearfix">
-					<li class="disabled"><a href="#"><span class="glyphicon glyphicon-search"></span><span class="nav-text hidden">Search</span></a></li>
-					<li><a href="#"><span class="profile-pic"></span><span class="nav-text hidden">profile</span></a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> <span class="nav-text">contact me</span></a></li>
+				<ul class="list-init nav-top-menu js-menu-tool">
+					<li class="disabled"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Search"><span class="glyphicon glyphicon-search"></span><span class="nav-text hidden">Search</span></a></li>
+					<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="rabbit"><span class="profile-pic"></span><span class="nav-text hidden">Profile</span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> <span class="nav-text">Contact</span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="page-container">
+	<div id="page-container">
 		<div class="profile-canopy">
 			<div class="profile-canopy-wrap">
 				<div class="profile-canopy-inner"></div>
@@ -44,24 +50,24 @@
 				<div class="container">
 					<div class="profile-info col-lg-3 col-md-3 hidden-sm hidden-xs">
 						<div class="profile-avatar">
-							<a href="#" class="profile-avatar-container"></a>
+							<a href="#" class="profile-avatar-container" data-toggle="tooltip" title="rabbit"></a>
 						</div>
 						<div class="profile-info-detail">
 							<div class="profile-mini mini-profile">
 								<a href="#" class="profile-mini-avatar"></a>
 							</div>
 							<div class="profile-mini profile-info-text">
-								<a href="#" class="user-name">I'm a big rabbit QwQ !!!</a>
-								<a href="#" class="user-email">@<span class="email-target">welcome to rabbit email ~~~</span></a>
+								<a href="#" class="user-name overflow-ellipsis">I'm a big rabbit QwQ !!!</a>
+								<a href="#" class="user-email overflow-ellipsis">@<span class="email-target">welcome to rabbit email ~~~</span></a>
 							</div>
 						</div>
 					</div>
-					<ul class="nav-init profile-nav col-lg-9 col-md-9 col-sm-12">
-						<li><a href="#" class="profile-nav-active"><span class="glyphicon"></span><span class="profile-nav-text">Tweets</span></a></li>
+					<ul class="list-init profile-nav col-lg-9 col-md-9 col-sm-12 js-nav-menu">
+						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Tweets</span></a></li>
 						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Works</span></a></li>
 						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Target&amp;Progress</span></a></li>
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Collection</span></a></li>
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Update Features</span></a></li>
+						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Note</span></a></li>
+						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Update Log</span></a></li>
 					</ul>
 				</div>
 				<div class="rating">
@@ -69,37 +75,102 @@
 				</div>
 			</div>
 		</div>
-		<div class="content-container container">
-			<div class="left-profile left-navbar col-lg-3 col-md-3 hidden-sm hidden-xs">
-				<div class="test-box"></div>
+		<div id="content-container" class="container">
+			<div class="guider col-lg-3 col-md-3 hidden-sm hidden-xs">
+
 			</div>
-			<div class="content-box col-lg-9 col-md-9 col-sm-12">
-				<div class="test-box"></div>
+			<div class="card-container col-lg-9 col-md-9 col-sm-12">
+
 			</div>
 		</div>
 	</div>
 	<footer class="footer">
 		<div class="container">
 			<div class="pull-left">
-				<ul class="nav-init footer-info web-info">
-					<li>© rabbit</li>
-					<li>Made by rabbit 2/17/2017 <a href="#" class="update-log">version: 1.0.0</a></li>
+				<ul class="list-init footer-info web-info">
+					<li>&copy; rabbit</li>
+					<li>Made by rabbit 2/17/2017 <a href="#" class="update-log" data-toggle="tooltip" title="2/17/2017">version: 1.1.0</a></li>
 				</ul>
 			</div>
 			<div class="pull-right">
 				<div class="footer-info lang-setting">
-					<button class="btn btn-default lang-btn"><span>language</span> <span class="caret"></span></button>
+					<div class="dropup">
+						<button id="lang-menu" class="btn btn-default lang-btn dropdown-toggle" data-toggle="dropdown">
+							<span>language</span> <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="lang-menu">
+							<li><a href="#">English</a></li>
+						</ul>
+					</div>
 				</div>
-				</ul>
 			</div>
 		</div>
 	</footer>
 </div>
-<div class="widgets hidden" style="position: absolute;">
+
+<!-- guider-lib -->
+<div class="guider-lib hidden">
+	<div class="update-log-guider">
+		<ul class="list-init sample-list card">
+			<li>
+				<button class="sample-btn" data-toggle="" title="All upgrades"><span class="sample color-all"></span><span class="sample-text overflow-ellipsis">All upgrades</span><span class="log-count all-count badge">2</span></button>
+			</li>
+			<li>
+				<button class="sample-btn" data-toggle="" title="Primary upgrades"><span class="sample color-primary"></span><span class="sample-text overflow-ellipsis">Primary upgrades</span><span class="log-count primary-count badge">1</span></button>
+			</li>
+			<li>
+				<button class="sample-btn" data-toggle="" title="Feature upgrades"><span class="sample color-secondly"></span><span class="sample-text overflow-ellipsis">Feature updates</span><span class="log-count secondly-count badge">1</span></button>
+			</li>
+			<li>
+				<button class="sample-btn" data-toggle="" title="Daily upgrades"><span class="sample color-daily"></span><span class="sample-text">Daily updates</span><span class="log-count daily-count badge">0</span></button>
+			</li>
+		</ul>
+	</div>
+
+</div>
+<!-- cards-lib -->
+<div class="cards-lib hidden">
+	<div class="card"></div>
+
+	<div class="profile-info-card card">
+		<span class="icon"></span>
+		<p>hello! I'm rabbit. Hope you enjoy this website:)</p>
+		<span class="icon"></span>
+	</div>
+	<div class="update-log-card card">
+		<h4><a href="" class="log-time" data-toggle="collapse">version Date</a></h4>
+		<div class="log-detail collapse">
+			<div class="log-detail-inner">
+				<p class="log-description">log description</p>
+				<ul class="update-features">
+					<li>Feature 1</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- widgets -->
+<div class="widgets hidden">
 	<div class="dot"></div>
 </div>
+
 </body>
 </html>
 
-<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+-->
+
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/lib.js"></script>
+<script src="js/controller.js"></script>
+
+
+<script>
+	$(function () { $('[data-toggle~=tooltip]').tooltip(); });
+</script>
+
+<script src="js/main.js"></script>

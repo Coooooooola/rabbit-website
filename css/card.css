@@ -1,0 +1,27 @@
+.card {
+	border-radius: 6px;
+	background-color: #fff;
+	box-shadow: 0 0 8px 0 rgba(63, 1, 1, 0.19);
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.profile-info-card {
+	
+}
+.update-log-card {
+	padding: 0;
+}
+.log-time {
+	display: block;
+	padding: 15px;
+	color: #fff;
+	user-select: none;
+	white-space: pre;
+}
+.log-time:hover {
+	color: #000;
+}
+.log-detail-inner {
+	padding: 0 15px 15px 15px;
+	color: #fff;
+}
