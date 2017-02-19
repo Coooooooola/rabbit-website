@@ -23,7 +23,6 @@ var logCards = new Array();
 
 function initNavMenu(menu, nodeName, num) {
 	var nodes = menu.querySelectorAll(nodeName);
-	console.log(nodes);
 	for (const node of nodes) {
 		node.onclick = function () {
 			$(menu.active).removeClass('active');
