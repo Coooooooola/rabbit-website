@@ -19,6 +19,5 @@ var logs = [{
 	"description":"Beautify the interface and use JSON to store data;",
 	"features":["Update the icons of github and Lab.",
 		"Store update logs in JSON.",
-		"Compatible with mobile terminal.",
 		"Update the website info in footer."]
 }];
