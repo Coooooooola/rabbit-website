@@ -15,7 +15,6 @@
 	display: block;
 	padding: 15px;
 	color: #fff;
-	user-select: none;
 	white-space: pre;
 }
 .log-time:hover {
@@ -24,4 +23,7 @@
 .log-detail-inner {
 	padding: 0 15px 15px 15px;
 	color: #fff;
+}
+.update-features:empty {
+	display: none;
 }

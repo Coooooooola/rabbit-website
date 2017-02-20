@@ -2,12 +2,14 @@
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style: none;
-	user-select: none;
 }
 .list-init::after {
 	content: '';
 	display: table;
 	clear: both;
+}
+.select-none {
+	user-select: none;
 }
 .overflow-ellipsis {
 	white-space: nowrap;
@@ -20,14 +22,19 @@ h4, p {
 html, body {
 	height: 100%;
 }
+@media (max-width: 841px) {
+	.adapt-xs {
+		width: 100% !important;
+	}
+}
 #content {
 	position: relative;
 	min-height: 100%;
+	min-width: 586px;
 	background-color: #f5f8fa;
 }
 #page-container {
 	position: relative;
-	min-width: 586px;
 }
 .container {
 	height: 100%;
@@ -57,4 +64,7 @@ html, body {
 }
 .user-email:hover .email-target {
 	text-decoration: underline;
+}
+.layout-transition {
+	transition: .3s;
 }

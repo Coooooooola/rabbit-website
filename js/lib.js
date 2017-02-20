@@ -3,22 +3,22 @@
 var content, pageContainer, contentContainer, langMenu;
 var guider, cardContainer;
 var navMenus = [];
-var logGuider, logCard;
+var logGuider, logCardTemplate;
 var sampleList;
 
-var logCards = new Array();
+var logCards = [];
 
 (function initParentNode() {
 	content = document.querySelector('#content');
 	pageContainer = document.querySelector('#page-container');
 	contentContainer = document.querySelector('#content-container');
 	langMenu = document.querySelector('#lang-menu');
-	guider = document.querySelector('.guider');
-	cardContainer = document.querySelector('.card-container');
+	guider = document.querySelector('#content-container>.guider');
+	cardContainer = document.querySelector('#content-container>.card-container');
 	navMenus = document.querySelectorAll('.js-nav-menu');
-	logGuider = document.querySelector('.update-log-guider');
-	logCard = document.querySelector('.update-log-card');
-	sampleList = document.querySelector('.sample-list');
+	logGuider = document.querySelector('.guider-lib>.update-log-guider');
+	logCardTemplate = document.querySelector('.card-lib>.update-log-card');
+	sampleList = guider.querySelector('.sample-list');
 })();
 
 function initNavMenu(menu, nodeName, num) {
@@ -45,7 +45,7 @@ function initLogCard(parent, card, id, color) {
 	$(link).attr('href', '#' + id);
 	
 	$(cardCopy).addClass(color);
-	parent.appendChild(cardCopy);
+	parent.insertBefore(cardCopy, parent.firstChild);
 	return cardCopy;
 }
 

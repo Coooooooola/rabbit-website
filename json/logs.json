@@ -1,10 +1,24 @@
-[
-{
-	"name":"rabbit",
-	"age":20
-},
-{
-	"name":"lisa",
-	"age":20
-}
-]
+var logs = [{
+	"type":"primary",
+	"version":"1.0.0",
+	"date":"2/17/2017",
+	"description":"Welcome to rabbit-website!",
+	"features":["Basic framework."]
+}, {
+	"type":"feature",
+	"version":"1.1.0",
+	"date":"2/19/2017",
+	"description":"Many basic elements of website were added and system structural optimization.",
+	"features":["Optimize the structure of HTML, CSS and Javascript.",
+		"Add the basic animations to widgets.",
+		"Add the basic Update-Log framework."]
+}, {
+	"type":"optimize",
+	"version":"1.1.1",
+	"date":"2/20/2017",
+	"description":"Beautify the interface and use JSON to store data;",
+	"features":["Update the icons of github and Lab.",
+		"Store update logs in JSON.",
+		"Compatible with mobile terminal.",
+		"Update the website info in footer."]
+}];

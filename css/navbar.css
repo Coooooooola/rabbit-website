@@ -55,7 +55,7 @@
 	background-color: rgba(255, 255, 255, 0.26);
 	overflow: hidden;
 }
-.nav-top-menu>li>a:hover {
+.nav-top-menu>li>a:hover, .nav-top-menu>li>a:focus {
 	background-color: rgba(255, 255, 255, 0.2);
 	height: 46px;
 }

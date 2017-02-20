@@ -13,7 +13,12 @@ footer {
 }
 footer .pull-left, footer .pull-right {
 	height: 100%;
-	padding: 5px 10px;
+	padding: 10px;
+}
+.product-info {
+	font-family: 'Segoe UI';
+	font-size: 12px;
+	color: rgb(48, 57, 66);
 }
 .lang-setting {
 	height: 100%;
@@ -22,7 +27,6 @@ footer .pull-left, footer .pull-right {
 .lang-setting {
 }
 .web-info {
-	padding-top: 15px;
 	line-height: 20px;
 }
 .lang-setting>.lang-btn {
