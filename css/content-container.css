@@ -1,10 +1,13 @@
 #content-container {
-	margin-top: 35px;
-	margin-bottom: 100px;
+	margin-top: -56px;
+	padding-top: 85px;
+	padding-bottom: 35px;
+	font-size: 1.1em;
+	min-height: 100vh;
 }
-#content-container>.guider, #content-container>.card-container {
-	padding-left: 8px;
-	padding-right: 8px;
+#content-container>.guider,
+#content-container>.card-container {
+	padding: 10px 8px;
 }
 .left-profile {
 	padding-right: 5px;

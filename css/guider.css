@@ -1,8 +1,3 @@
-.color-all { background-image: linear-gradient(46deg, #693ef5 36%, #ff7474 36%, #ff7474 64%, #6ace6a 64%); }
-.color-primary { background-color: #693ef5; }
-.color-feature { background-color: #ff7474; }
-.color-optimize { background-color: #6ace6a; }
-
 .sample {
 	margin: auto 5px auto 0;
 	width: 50px;
@@ -26,10 +21,10 @@
 	border: none;
 	padding: 6px 10px;
 	line-height: 24px;
-	transition: .1s;
 	outline: none;
+	transition: .05s;
 }
-.sample-btn:hover, .sample-btn.active {
+.sample-btn:hover, .active>.sample-btn {
 	background-color: rgba(0,0,0,.22);
 }
 .log-count {

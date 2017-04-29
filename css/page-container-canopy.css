@@ -2,17 +2,17 @@
 	position: relative;
 }
 .profile-canopy-inner {
-	height: 280px;
+	height: 275px;
 	margin-left: -8px;
 	margin-right: -8px;
-	background-image: url(../imgs/rabbit-bg.jpg);
 	background-size: cover;
-	background-position-y: -54px;
+	background-position-y: -280px;
 	background-repeat: no-repeat;
 }
 @media (max-width: 987px) {
-	.profile-canopy-inner, .bg-mask::before {
-		background-size: initial;
+	.profile-canopy-inner,
+	.pos-mask {
+		background-size: 1200px;
 	}
 	.profile-navbar>.rating {
 		right: 10px;
@@ -40,6 +40,6 @@
 }
 @media (min-width: 1510px) {
 	.profile-canopy-inner {
-		height: 420px;
+		height: 453px;
 	}
 }

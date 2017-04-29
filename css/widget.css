@@ -1,3 +1,7 @@
+#widgets {
+	display: none;
+}
+
 .rating {
 	position: absolute;
 	top: -60px;

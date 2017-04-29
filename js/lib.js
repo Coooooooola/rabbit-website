@@ -1,42 +1,31 @@
 'use strict';
 
-var content, pageContainer, contentContainer, langMenu;
-var guider, cardContainer;
-var navMenus = [];
-var logGuider, logCardTemplate;
-var sampleList;
-
-var logCards = [];
-
-(function initParentNode() {
-	content = document.querySelector('#content');
-	pageContainer = document.querySelector('#page-container');
-	contentContainer = document.querySelector('#content-container');
-	langMenu = document.querySelector('#lang-menu');
-	guider = document.querySelector('#content-container>.guider');
-	cardContainer = document.querySelector('#content-container>.card-container');
-	navMenus = document.querySelectorAll('.js-nav-menu');
-	logGuider = document.querySelector('.guider-lib>.update-log-guider');
-	logCardTemplate = document.querySelector('.card-lib>.update-log-card');
-	sampleList = guider.querySelector('.sample-list');
-})();
-
-function initNavMenu(menu, nodeName, num) {
+/*function initActiveMenu(menu, nodeName, num, callBack) {
 	var nodes = menu.querySelectorAll(nodeName);
-	for (const node of nodes) {
+	for (let i = 0; i < nodes.length; i++) {
+		let node = nodes[i];
+
 		node.onclick = function () {
-			$(menu.active).removeClass('active');
+			$(menu.active).parent().removeClass('active');
+			var last = menu.active;
 			menu.active = this;
-			this.className += ' active';
+			this.parentNode.className += ' active';
 		};
 	}
 	if (! isNaN(num)) {
 		menu.active = nodes[num];
 		nodes[num].onclick();
 	}
-}
+}*/
 
-function initLogCard(parent, card, id, color) {
+/*function initLogGuider() {
+	var newLogGuider = logGuider.cloneNode(true);
+	guider.appendChild(newLogGuider);
+	initActiveMenu(newLogGuider, '.sample-btn', 0);
+	return newLogGuider;
+}*/
+
+/*function initLogCard(parent, card, id, color) {
 	var cardCopy = card.cloneNode(true);
 	
 	cardCopy.querySelector('.log-detail').id = id;
@@ -49,3 +38,75 @@ function initLogCard(parent, card, id, color) {
 	return cardCopy;
 }
 
+function activeNode(last, next) {
+	last.node.style.display = 'none';
+	next.node.style = none;
+}*/
+
+function mapping(callBack) {
+	return function (event) {
+		var href;
+		for (let element of event.path) {
+			if (element.tagName == 'A') {
+				href = element.href;
+				break;
+			}
+		}
+		var id = href.replace(/^[^#]*/, '');
+		callBack(id);
+	};
+	
+}
+
+function active(id) {
+	var container = document.querySelector(id + '-container');
+	if (container.parentElement.active)
+		container.parentElement.active.style.display = null;
+	container.parentElement.active = container;
+	container.style.display = 'block';
+}
+
+function initLogCard(cardSample, log) {
+	var card = cardSample.cloneNode(true);
+	card.className += ' color-' + log.type;
+	var id = dateToID(log.date);
+	var title = card.querySelector('.log-time');
+	title.href = '#' + id;
+	title.innerText = 'Version: ' + log.version + '   Date: ' + log.date;
+	var logDetail = card.querySelector('.log-detail');
+	logDetail.id = id;
+	logDetail.querySelector('.log-description').innerText = log.description;
+	var features = logDetail.querySelector('.update-features');
+	for (let feature of log.features) {
+		let item = document.createElement('li');
+		item.innerText = feature;
+		features.appendChild(item);
+	}
+	return card;
+}
+
+function menuListener(menu, type, callBack, initFunc) {
+	menu.addEventListener(type, function (event) {
+		var active;
+		for (let element of event.path) {
+			active = element;
+			if (active.parentElement == this)
+				break;
+			if (active == this)
+				return;
+		}
+		if (active == menu.active)
+			return;
+		if (menu.active)
+			menu.active.className = '';
+		menu.active = active;
+		active.className = 'active';
+
+		if (callBack)
+			callBack(event);		
+	});
+	if (initFunc)
+		initFunc(menu);
+	else
+		menu.firstElementChild.click();
+}

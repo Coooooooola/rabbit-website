@@ -32,7 +32,7 @@
 	float: left;
 	height: 100%;
 }
-.bg-mask::before {
+.pos-mask {
 	content: '';
 	display: block;
 	position: absolute;
@@ -42,7 +42,6 @@
 	bottom: 0;
 	margin: -8px;
 
-	background-image: url(../imgs/rabbit-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	filter: blur(4px);
@@ -55,10 +54,11 @@
 	background-color: rgba(255, 255, 255, 0.26);
 	overflow: hidden;
 }
-.nav-top-menu>li>a:hover, .nav-top-menu>li>a:focus {
+.nav-top-menu>li>a:hover,
+.nav-top-menu>li>a:focus {
 	background-color: rgba(255, 255, 255, 0.2);
 	height: 46px;
 }
-.nav-top .active {
+.nav-top .active>a {
 	height: 46px;
 }

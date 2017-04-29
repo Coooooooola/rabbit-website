@@ -16,8 +16,18 @@ var logs = [{
 	"type":"optimize",
 	"version":"1.1.1",
 	"date":"2/20/2017",
-	"description":"Beautify the interface and use JSON to store data;",
+	"description":"Beautify the interface and use JSON to store data.",
 	"features":["Update the icons of github and Lab.",
 		"Store update logs in JSON.",
 		"Update the website info in footer."]
+}, {
+	"type":"feature",
+	"version":"1.2.1",
+	"date":"4/29/2017",
+	"description":"Rewrite Javascript and improve the interactive experience.",
+	"features":["Now navigation bar is usable.",
+		"Dynamically Fix the navigation bar.",
+		"Redesign the structure of HTML.",
+		"Redesign the structure of Javascript.",
+		"Replace the background image."]
 }];

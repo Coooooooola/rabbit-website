@@ -1,15 +1,23 @@
+.color-all { background-image: linear-gradient(45deg, #693ef5 36%, #ff7474 36%, #ff7474 64%, #6ace6a 64%); }
+.color-primary { background-color: #693ef5; }
+.color-feature { background-color: #ff7474; }
+.color-optimize { background-color: #6ace6a; }
+
 .list-init {
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style: none;
 }
-.list-init::after {
+.clearfix::before,
+.clearfix::after {
 	content: '';
 	display: table;
 	clear: both;
 }
 .select-none {
-	user-select: none;
+	-moz-user-select: none;
+	 -ms-user-select: none;
+		 user-select: none;
 }
 .overflow-ellipsis {
 	white-space: nowrap;
@@ -19,9 +27,6 @@
 h4, p {
 	margin: 0;
 }
-html, body {
-	height: 100%;
-}
 @media (max-width: 841px) {
 	.adapt-xs {
 		width: 100% !important;
@@ -29,12 +34,11 @@ html, body {
 }
 #content {
 	position: relative;
-	min-height: 100%;
-	min-width: 586px;
 	background-color: #f5f8fa;
 }
 #page-container {
 	position: relative;
+	font-family: 'Segoe UI';
 }
 .container {
 	height: 100%;
@@ -42,7 +46,8 @@ html, body {
 .profile-canopy-wrap {
 	overflow: hidden;
 }
-.container>.profile-nav::before, .container>.profile-nav::after {
+.container>.profile-nav::before,
+.container>.profile-nav::after {
 	content: none;
 }
 .profile-nav>li>a {
@@ -59,12 +64,25 @@ html, body {
 	line-height: 19px;
 	color: #66757f;
 }
-.user-email:hover, .user-email:focus {
+.user-email:hover,
+.user-email:focus {
 	text-decoration: none;
 }
 .user-email:hover .email-target {
 	text-decoration: underline;
 }
-.layout-transition {
-	transition: .3s;
+.bg-img {
+	background-image: url(../imgs/rabbit-bg.jpg);
+}
+.module-container,
+.sample-container {
+	display: none;
+}
+.module-container>div {
+	padding: 10px;
+}
+
+.fix-top {
+	position: fixed !important;
+	top: 0;
 }

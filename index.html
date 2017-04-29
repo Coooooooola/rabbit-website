@@ -22,86 +22,158 @@
 <body>
 
 <div id="content" class="clearfix">
-	<nav class="nav-top">
-		<div class="bg-mask"></div>
-		<div class="container adapt-xs">
-			<div class="pull-left">
-				<ul class="list-init nav-top-menu js-nav-menu select-none">
-					<li><a href="#"><span class="glyphicon glyphicon-home"></span> <span class="nav-text">Home</span></a></li>
-					<li><a href="#"><span class="fa fa-github" aria-hidden="true" style="font-size: 24px;"></span> <span class="nav-text">github</span></a></li>
-					<li><a href="#"><span class="fa fa-flask" aria-hidden="true" style="font-size: 21px;"></span><span class="nav-text">Lab</span></a></li>
-				</ul>
+	<div id="main-content">
+		<nav class="nav-top">
+			<div class="bg-mask">
+				<div class="pos-mask bg-img"></div>
 			</div>
-			<div class="pull-right">
-				<ul class="list-init nav-top-menu js-menu-tool select-none">
-					<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Search"><span class="glyphicon glyphicon-search"></span><span class="nav-text hidden">Search</span></a></li>
-					<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="rabbit"><span class="profile-pic"></span><span class="nav-text hidden">Profile</span></a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> <span class="nav-text">Contact</span></a></li>
-				</ul>
+			<div class="container adapt-xs">
+				<div class="pull-left">
+					<ul class="list-init clearfix nav-top-menu js-active-menu select-none">
+						<li><a href="/rabbit"><span class="glyphicon glyphicon-home"></span> <span class="nav-text">Home</span></a></li>
+						<li><a href="#"><span class="fa fa-github" aria-hidden="true" style="font-size: 24px;"></span> <span class="nav-text">github</span></a></li>
+						<li><a href="#"><span class="fa fa-pencil" aria-hidden="true" style="font-size: 21px;"></span> <span class="nav-text">Editor</span></a></li>
+						<li><a href="#"><span class="fa fa-flask" aria-hidden="true" style="font-size: 21px;"></span> <span class="nav-text">Lab</span></a></li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<ul class="list-init clearfix nav-top-menu js-menu-tool select-none">
+						<li><a href="#search" data-toggle="tooltip" data-placement="bottom" title="Search"><span class="glyphicon glyphicon-search"></span><span class="nav-text hidden">Search</span></a></li>
+						<li><a href="#profile" data-toggle="tooltip" data-placement="bottom" title="rabbit"><span class="profile-pic img-circle"></span><span class="nav-text hidden">Profile</span></a></li>
+						<li><a href="#contact"><span class="glyphicon glyphicon-envelope"></span> <span class="nav-text">Contact</span></a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
-	<div id="page-container">
-		<div class="profile-canopy">
-			<div class="profile-canopy-wrap">
-				<div class="profile-canopy-inner layout-transition"></div>
-			</div>
-			<div class="profile-navbar">
-				<div class="container adapt-xs">
-					<div class="profile-info col-lg-3 col-md-3 hidden-sm hidden-xs">
-						<div class="profile-avatar">
-							<a href="#" class="profile-avatar-container" data-toggle="tooltip" title="rabbit"></a>
-						</div>
-						<div class="profile-info-detail">
-							<div class="profile-mini mini-profile">
-								<a href="#" class="profile-mini-avatar"></a>
+		</nav>
+		<div id="page-container" class="clearfix">
+			<div class="profile-canopy">
+				<div class="profile-canopy-wrap">
+					<div class="profile-canopy-inner bg-img"></div>
+				</div>
+				<div class="profile-navbar">
+					<div class="profile-navbar-inside">
+
+						<div class="container adapt-xs">
+
+							<div class="profile-info col-lg-3 col-md-3 hidden-sm hidden-xs">
+								<div class="profile-avatar">
+									<a href="#" class="profile-avatar-container" data-toggle="tooltip" title="rabbit"></a>
+								</div>
+								<div class="profile-info-detail" style="display: none;">
+									<div class="profile-mini mini-profile">
+										<a href="#" class="profile-mini-avatar"></a>
+									</div>
+									<div class="profile-mini profile-info-text">
+										<a href="#" class="user-name overflow-ellipsis">I'm a big rabbit QwQ !!!</a>
+										<a href="#" class="user-email overflow-ellipsis">@<span class="email-target">rabbit email ~~~</span></a>
+									</div>
+								</div>
 							</div>
-							<div class="profile-mini profile-info-text">
-								<a href="#" class="user-name overflow-ellipsis">I'm a big rabbit QwQ !!!</a>
-								<a href="#" class="user-email overflow-ellipsis">@<span class="email-target">welcome to rabbit email ~~~</span></a>
+							<ul class="list-init clearfix profile-nav col-lg-9 col-md-9 col-sm-12 js-active-menu select-none">
+								<li><a href="#tweets"><span class="profile-nav-text">Tweets</span></a></li>
+								<li><a href="#works"><span class="profile-nav-text">Works</span></a></li>
+								<li><a href="#target-and-progress"><span class="profile-nav-text">Target&amp;Progress</span></a></li>
+								<li><a href="#notes"><span class="profile-nav-text">Notes</span></a></li>
+								<li><a href="#update-log"><span class="profile-nav-text">Update Log</span></a></li>
+							</ul>
+
+						</div>
+						
+					</div>
+				</div>
+				<div class="rating" style="display: none;">
+				</div>
+			</div>
+			<div id="content-container" class="container adapt-xs">
+
+				<!-- tweets-container -->
+				<div id="tweets-container" class="module-container clearfix">
+					<div class="guider col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					</div>
+					<div class="card-container col-lg-9 col-md-9 col-sm-12 col-xs-12">
+					</div>
+				</div>
+
+				<!-- works-container -->
+				<div id="works-container" class="module-container clearfix">
+					<div class="guider col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					</div>
+					<div class="card-container col-lg-9 col-md-9 col-sm-12 col-xs-12">
+					</div>
+				</div>
+
+				<!-- target-and-progress-container -->
+				<div id="target-and-progress-container" class="module-container clearfix">
+					<div class="guider col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					</div>
+					<div class="card-container col-lg-9 col-md-9 col-sm-12 col-xs-12">
+					</div>
+				</div>
+
+				<!-- notes-container -->
+				<div id="notes-container" class="module-container clearfix">
+					<div class="guider col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					</div>
+					<div class="card-container col-lg-9 col-md-9 col-sm-12 col-xs-12">
+					</div>
+				</div>
+
+				<!-- update-log-container -->
+				<div id="update-log-container" class="module-container clearfix">
+					<div class="guider col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="update-log-guider update-log">
+							<ul class="list-init clearfix sample-list card select-none">
+								<li>
+									<button class="sample-btn" title="All upgrades"><span class="sample color-all"></span><span class="sample-text overflow-ellipsis">All upgrades</span><span class="log-count all-count badge">4</span></button>
+								</li>
+								<li>
+									<button class="sample-btn" title="Primary upgrades"><span class="sample color-primary"></span><span class="sample-text overflow-ellipsis">Primary upgrades</span><span class="log-count primary-count badge">1</span></button>
+								</li>
+								<li>
+									<button class="sample-btn" title="Feature upgrades"><span class="sample color-feature"></span><span class="sample-text overflow-ellipsis">Feature updates</span><span class="log-count feature-count badge">2</span></button>
+								</li>
+								<li>
+									<button class="sample-btn" title="Optimize upgrades"><span class="sample color-optimize"></span><span class="sample-text overflow-ellipsis">Optimize updates</span><span class="log-count optimize-count badge">1</span></button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card-container col-lg-9 col-md-9 col-sm-12 col-xs-12">
+						<div class="sample-container">
+							<div class="update-log-card card update-log">
+								<h4><a href="" class="log-time select-none overflow-ellipsis" data-toggle="collapse">Version Date</a></h4>
+								<div id="" class="log-detail collapse">
+									<div class="log-detail-inner">
+										<p class="log-description">Log description</p>
+										<ul class="update-features"></ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<ul class="list-init profile-nav col-lg-9 col-md-9 col-sm-12 js-nav-menu select-none">
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Tweets</span></a></li>
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Works</span></a></li>
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Target&amp;Progress</span></a></li>
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Note</span></a></li>
-						<li><a href="#"><span class="glyphicon"></span><span class="profile-nav-text">Update Log</span></a></li>
-					</ul>
 				</div>
-				<div class="rating">
-					
-				</div>
-			</div>
-		</div>
-		<div id="content-container" class="container adapt-xs">
-			<div class="guider col-lg-3 col-md-3 col-sm-12 col-xs-12">
-				<!-- guider container -->
-			</div>
-			<div class="card-container col-lg-9 col-md-9 col-sm-12 col-xs-12">
-				<!-- card container -->
+
 			</div>
 		</div>
 	</div>
-	<footer class="footer">
+	<footer>
 		<div class="container adapt-xs">
 			<div class="product-info pull-left">
-				<ul class="list-init footer-info web-info">
+				<ul class="list-init clearfix footer-info web-info">
 					<li>Copyright 2017 rabbit. All rights reserved.</li>
 					<li>Made by rabbit. Released at github on 2/17/2017.</li>
-					<li><a href="#" class="update-log" data-toggle="tooltip" data-placement="right" title="2/19/2017">version: 1.1.0</a></li>
+					<li><a href="#update-log" data-toggle="tooltip" data-placement="right" title="4/29/2017">Version: 1.2.0</a></li>
 				</ul>
 			</div>
-			<div class="setting-area pull-right">
+			<div class="pull-right">
 				<div class="footer-info lang-setting">
 					<div class="dropup">
 						<button id="lang-menu" class="btn btn-default lang-btn dropdown-toggle" data-toggle="dropdown">
 							<span>Language</span> <span class="caret"></span>
 						</button>
-						<ul class="dropdown-menu js-nav-menu" aria-labelledby="lang-menu">
-							<li><a href="#">English</a></li>
-							<li><a href="#">Japanese</a></li>
+						<ul class="dropdown-menu js-active-menu" aria-labelledby="lang-menu">
+							<li><a href="#" class="select-none">English</a></li>
+							<li><a href="#" class="select-none">Japanese</a></li>
 						</ul>
 					</div>
 				</div>
@@ -110,47 +182,8 @@
 	</footer>
 </div>
 
-<!-- guider-lib -->
-<div class="guider-lib hidden">
-	<div class="update-log-guider">
-		<ul class="list-init sample-list card select-none">
-			<li>
-				<button class="sample-btn" data-toggle="" title="All upgrades"><span class="sample color-all"></span><span class="sample-text overflow-ellipsis">All upgrades</span><span class="log-count all-count badge">2</span></button>
-			</li>
-			<li>
-				<button class="sample-btn" data-toggle="" title="Primary upgrades"><span class="sample color-primary"></span><span class="sample-text overflow-ellipsis">Primary upgrades</span><span class="log-count primary-count badge">1</span></button>
-			</li>
-			<li>
-				<button class="sample-btn" data-toggle="" title="Feature upgrades"><span class="sample color-feature"></span><span class="sample-text overflow-ellipsis">Feature updates</span><span class="log-count feature-count badge">1</span></button>
-			</li>
-			<li>
-				<button class="sample-btn" data-toggle="" title="Optimize upgrades"><span class="sample color-optimize"></span><span class="sample-text overflow-ellipsis">Optimize updates</span><span class="log-count optimize-count badge">0</span></button>
-			</li>
-		</ul>
-	</div>
-
-</div>
-<!-- cards-lib -->
-<div class="card-lib hidden">
-	<div class="card"></div>
-
-	<div class="profile-info-card card">
-		<span class="icon"></span>
-		<p>Hello! I'm rabbit. Hope you enjoy this website:)</p>
-		<span class="icon"></span>
-	</div>
-	<div class="update-log-card card">
-		<h4><a href="" class="log-time select-none" data-toggle="collapse">Version Date</a></h4>
-		<div class="log-detail collapse">
-			<div class="log-detail-inner">
-				<p class="log-description">Log description</p>
-				<ul class="update-features"></ul>
-			</div>
-		</div>
-	</div>
-</div>
 <!-- widgets -->
-<div class="widgets hidden">
+<div id="widgets">
 	<div class="dot"></div>
 </div>
 
@@ -159,16 +192,19 @@
 
 <!-- <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script> -->
 <!-- <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 
 <!-- online script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script> $(function () { $('[data-toggle~=tooltip]').tooltip(); }); </script>
 
 <!-- jsons -->
 <script src="json/logs.json"></script>
 
 <!-- library script -->
+<script src="js/get-elements.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/json-lib.js"></script>
 <script src="js/an-lib.js"></script>

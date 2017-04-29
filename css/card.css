@@ -1,12 +1,11 @@
 .card {
 	border-radius: 6px;
-	background-color: #fff;
-	box-shadow: 0 0 8px 0 rgba(63, 1, 1, 0.19);
+	box-shadow: 0 0 8px 1px rgba(110, 110, 110, 0.26);
 	padding: 10px;
 	margin-bottom: 15px;
 }
-.profile-info-card {
-	
+.card:last-child {
+	margin-bottom: 0;
 }
 .update-log-card {
 	padding: 0;
