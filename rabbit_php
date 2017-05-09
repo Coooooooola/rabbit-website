@@ -1,5 +1,0 @@
-<?php
-
-echo '<p> seems github supports php.</p>';
-
-?>
